@@ -1,0 +1,37 @@
+{
+	"name": "simple-telegram-api",
+	"version": "1.0.0",
+	"description": "Telegram NodeJS library",
+	"main": "build/index.js",
+	"types": "build/index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@types/node": "^11.15.3",
+		"typescript": "^3.4.5",
+		"@types/file-type": "^10.9.1",
+		"@types/mime": "^2.0.1",
+		"@types/request-promise": "^4.1.45"
+	},
+	"dependencies": {
+		"mime": "^2.4.4",
+		"file-type": "^12.4.0",
+		"request": "^2.88.0",
+		"request-promise": "^4.2.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/peterszombati/simple-telegram-api.git"
+	},
+	"keywords": [
+		"telegram"
+	],
+	"author": "Peter Szombati",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/peterszombati/simple-telegram-api/issues"
+	},
+	"homepage": "https://github.com/peterszombati/simple-telegram-api#readme"
+}
