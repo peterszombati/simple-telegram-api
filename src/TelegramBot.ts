@@ -56,17 +56,18 @@ export class TelegramBot {
         fileOptions: { filename?: string, contentType?: string} = {}
     ) {
         try {
+            const isHTTP = typeof(photo) === 'string' && photo.slice(0,4) === 'http' && (photo.slice(4,7) === '://' || photo.slice(4,8) === 's://');
             return this.request('sendPhoto', {
                 qs: {
                     ...options,
                     chat_id,
-                    photo: null,
+                    photo: isHTTP ? photo : null,
                     caption,
                     parse_mode,
                     disable_notification,
                     reply_to_message_id
                 },
-                formData: formatSendData('photo', photo, fileOptions)
+                formData: isHTTP ? undefined : formatSendData('photo', photo, fileOptions)
             });
         } catch (ex) {
             return Promise.reject(ex);
